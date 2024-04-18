@@ -17,4 +17,4 @@ async def enable(services):
     iot_api = IotAPI(services)
     # Add API routes here
     app.router.add_route('POST', '/plugin/iot/mirror', iot_api.mirror)
-
+    

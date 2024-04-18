@@ -1,0 +1,45 @@
+- requirements: []
+  repeatable: false
+  buckets:
+  - Discovery
+  executors:
+  - command: ./synscan.sh
+    additional_info: {}
+    build_target: null
+    uploads: []
+    code: null
+    name: sh
+    language: null
+    payloads:
+    - synscan.sh
+    parsers: []
+    variations: []
+    cleanup: []
+    timeout: 60
+    platform: linux
+  privilege: ''
+  additional_info: {}
+  plugin: ''
+  technique_id: TBD
+  delete_payload: true
+  tactic: discovery
+  name: synscan.c - a simple TCP SYN Scanner for Linux
+  access: {}
+  technique_name: auto-generated
+  description: 'This simple port scanner emits TCP SYN datagrams and waits for replies.
+
+    If a TCP SYN/ACK datagram is received, the port is considered as open. If
+
+    either a TCP RST datagram is received or a timeout elapses, the port is
+
+    considered as closed. There can be multiple outstanding SYN packets
+
+    travelling around, i.e. the tool doesn''t wait for one packet to return until
+
+    the next one is sent. The number of parallel packets can be defined by a
+
+    preprocessor constant.
+
+    '
+  singleton: false
+  id: a9ecf4d5-fa94-41b2-bafb-fd916b71bc1d
