@@ -1,0 +1,22 @@
+---
+- id: a4894db2-0b21-11ef-b553-077c93569fb3
+  name: Telnet Bruteforce Python Script
+  description: |
+    The script is designed to automate the process of credential stuffing attacks against network devices exposed via Telnet. 
+    It uses a predefined list of default credentials commonly associated with IoT vulnerabilities, 
+    attempting to gain unauthorized access to simulate the threat behavior observed in the Mirai botnet. 
+  tactic: credential access
+  technique:
+    attack_id: T1110.004
+    name: Brute Force - Credential Stuffing 
+  repeatable: true
+  platforms:
+    linux:
+      sh:
+        command: 'python3 telnet_bruteforce.py 192.168.150.20 2323'
+        payloads:
+        - telnet_bruteforce.py
+        timeout: 300  # 5 minutes
+  delete_payload: true
+  singleton: false
+  
